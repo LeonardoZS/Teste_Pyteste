@@ -36,7 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Relizando o teste
       run: |
-        def test_certo():
-          with open('output_certo.txt') as output:
-        dados = output.read()
-          assert dados == saida
+        pytest main.py/test_certo
